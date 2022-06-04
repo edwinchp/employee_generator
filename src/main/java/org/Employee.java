@@ -1,20 +1,19 @@
-package employee;
+package org;
 
 public class Employee {
     private String name;
-
-
     private String lastName;
+    private String email;
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
+    public Employee(String name, String lastName, String email){
+        this.name = name;
+        this.lastName = lastName;
         this.email = email;
     }
 
-    private String email;
+    public String toString(){
+        return this.email;
+    }
 
 
     public String getName() {
@@ -26,7 +25,6 @@ public class Employee {
     }
 
 
-
     public String getLastName() {
         return lastName;
     }
@@ -34,5 +32,17 @@ public class Employee {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
+
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+
+
 
 }
