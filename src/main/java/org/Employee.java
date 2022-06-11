@@ -1,17 +1,24 @@
 package org;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Employee {
+    private int id;
+    private static int counter = 1;
     private String name;
     private String lastName;
     private String email;
+    private static List<Employee> employees = new ArrayList<>();
 
-    public Employee(String name, String lastName, String email){
+    public Employee(String name, String lastName, String email) {
         this.name = name;
         this.lastName = lastName;
         this.email = email;
+        this.id = counter++;
     }
 
-    public String toString(){
+    public String toString() {
         return this.email;
     }
 
@@ -42,7 +49,15 @@ public class Employee {
         this.email = email;
     }
 
+    public static List<Employee> getEmployees() {
+        return employees;
+    }
 
+    public static void addEmployee(Employee employee) {
+        employees.add(employee);
+    }
 
-
+    public int getId() {
+        return id;
+    }
 }
